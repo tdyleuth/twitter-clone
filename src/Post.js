@@ -11,27 +11,26 @@ function Post({ displayName, username, verified, text, image, avatar }) {
     return (
         <div className='post'>
             <div className='post__avatar'>
-                <Avatar src='https://smu-static.s3.us-west-2.amazonaws.com/images/accounts/1326420.jpg?v=1548182164' />
+                <Avatar src={Avatar} />
             </div>
             <div className='post__body'>
                 <div className='post__header'>
                     <div className='post__headerText'>
                         <h3>
-                            Tony Dyleuth{" "}
+                            {displayName}
                             <span className='post_headerSpecial'>
-                                <VerifiedUserIcon className='post__badge' />{" "}
-                                @tdyleuth
+                                {verified && (
+                                    <VerifiedUserIcon className='post__badge' />
+                                )}
+                                @{username}
                             </span>
                         </h3>
                     </div>
                     <div className='post__headerDescription'>
-                        <p>Bat Cat or Cat Bat??</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img
-                    src='https://thumbs.gfycat.com/DeliciousIdioticIchthyosaurs-small.gif'
-                    alt=''
-                />{" "}
+                <img src={image} alt='' />{" "}
                 <div className='post__footer'>
                     <ChatBubbleOutlineIcon fontSize='small' />
                     <RepeatIcon fontSize='small' />
