@@ -25,7 +25,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
                         </h3>
                     </div>
                     <div className='post__headerDescription'>
-                        <p>Check out my kitty!</p>
+                        <p>Bat Cat or Cat Bat??</p>
                     </div>
                 </div>
                 <img
